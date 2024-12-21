@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">MY Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li> <a href="/">About Me</a> </li>
+                    <li> <a href="/">Projects</a> </li>
+                    <li> <a href="/">Skills</a> </li>
+                    <li> <a href="/">Contact Me</a> </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi,
+                <div>My name is <span class="purple">Arvind</span> </div>
+                <div>and I am a Passionate</div>
+                <span id="element"></span>
+            </div>
+            <div class="rightSection">
+                <img src="image.png" alt="">
+            </div>
+        </section>
+        <hr>
+        <div class="contaner-form">
+            <div class="form-div">
+                <form action="">
+                    <h2>Feedback</h2>
+                    <label for="feedback">
+                        <input placeholder="Type your Feedback Here!" type="text" name="feedback" id="feedback">
+                    </label>
+                    <div>
+                        <input type="submit" name="submit" id="submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <hr>
+    </main>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- Setup and start animation! -->
+    <script>
+        let typed = new Typed('#element', {
+            strings: ['Web Developer', 'Web Developer'],
+            typeSpeed: 500,
+        });
+        
+        let sub = document.getElementById('submit');
+        
+        function su(){
+            alert("Your feedback has been submitted");
+        }
+        
+        sub.addEventListener('click', su);
+    </script>
+</body>
+
+</html>
